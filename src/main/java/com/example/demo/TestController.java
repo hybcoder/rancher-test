@@ -13,6 +13,6 @@ public class TestController {
 
     @RequestMapping("/index")
     public String index(){
-        return "rancher";
+        return "hello rancher";
     }
 }
