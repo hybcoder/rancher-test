@@ -35,3 +35,9 @@ spec:
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 8085
+        env:
+        - name: configmap
+          valueFrom:
+            configMapKeyRef:
+              name: configmap
+              key: configmap
