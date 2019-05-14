@@ -8,8 +8,8 @@ spec:
   type: NodePort
   ports:
     - protocol: TCP
-      port: 30001
-      targetPort: 30001
+      port: 8085
+      targetPort: 8085
       # nodePort: 30001
 ---
 apiVersion: apps/v1
@@ -34,4 +34,4 @@ spec:
       - name: maven
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         ports:
-        - containerPort: 30001
+        - containerPort: 8085
